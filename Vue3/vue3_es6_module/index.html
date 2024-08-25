@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue3 EsModule 版</title>
+</head>
+
+<body>
+  <div id="app">
+    {{ message }}
+    <!-- <button @click="count++">
+      Count is: {{ count }}
+    </button> -->
+  </div>
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3.4.38/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
+  <script type="module">
+    import { createApp, ref } from 'vue'
+    import Counter from './Counter.js'
+    
+    createApp({
+      setup() {
+        const message = ref('Hello Vue!');
+        // const count = ref(0);
+        return {
+          message,
+          // count
+        }
+      }
+    }).mount('#app')
+  </script>
+</body>
+
+</html>
