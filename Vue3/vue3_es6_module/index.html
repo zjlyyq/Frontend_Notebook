@@ -35,7 +35,10 @@
           message,
           count
         }
-      }
+      },
+      template: /*html*/`
+        <p>根组件模板</p>
+        `
     }).mount('#app')
 
     createApp(Counter).mount("#Counter")
