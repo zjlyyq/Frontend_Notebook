@@ -11,10 +11,11 @@
 <body>
   <div id="app">
     {{ message }}
-    <!-- <button @click="count++">
+    <button @click="count++">
       Count is: {{ count }}
-    </button> -->
+    </button>
   </div>
+  <div id="Counter"></div>
   <script type="importmap">
     {
       "imports": {
@@ -29,13 +30,15 @@
     createApp({
       setup() {
         const message = ref('Hello Vue!');
-        // const count = ref(0);
+        const count = ref(0);
         return {
           message,
-          // count
+          count
         }
       }
     }).mount('#app')
+
+    createApp(Counter).mount("#Counter")
   </script>
 </body>
 
