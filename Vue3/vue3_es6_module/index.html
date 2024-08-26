@@ -27,7 +27,7 @@
     import { createApp, ref } from 'vue'
     import Counter from './Counter.js'
     
-    createApp({
+    const app = createApp({
       setup() {
         const message = ref('Hello Vue!');
         const count = ref(0);
@@ -39,9 +39,13 @@
       template: /*html*/`
         <p>根组件模板</p>
         `
-    }).mount('#app')
-
+    })
+    console.log('挂载前返回应用实例：', app);
+    const rootComp = app.mount('#app')
+    console.log('挂载后返回组件实例：', rootComp);
+    
     createApp(Counter).mount("#Counter")
+
   </script>
 </body>
 
