@@ -1,0 +1,21 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "edge": "12",
+          "firefox": "40",
+          "chrome": "40",
+          "safari": "8"
+        }
+        // "useBuiltIns": "usage",
+        // "corejs": "3.6.5"
+      }
+    ]
+  ],
+  // "plugins": [
+  //   "@babel/plugin-transform-arrow-functions",
+  //   "@babel/plugin-transform-classes"
+  // ]
+}
