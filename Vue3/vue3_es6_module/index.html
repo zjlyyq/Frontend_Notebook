@@ -16,6 +16,7 @@
     </button>
   </div>
   <div id="Counter"></div>
+  <div id="CodeBox"></div>
   <script type="importmap">
     {
       "imports": {
@@ -26,7 +27,7 @@
   <script type="module">
     import { createApp, ref } from 'vue'
     import Counter from './Counter.js'
-    
+    import CodeBox from './CodeBox.js'
     const app = createApp({
       setup() {
         const message = ref('Hello Vue!');
@@ -45,6 +46,7 @@
     console.log('挂载后返回组件实例：', rootComp);
     
     createApp(Counter).mount("#Counter")
+    createApp(CodeBox).mount("#CodeBox")
 
   </script>
 </body>
