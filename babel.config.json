@@ -14,8 +14,8 @@
       }
     ]
   ],
-  // "plugins": [
-  //   "@babel/plugin-transform-arrow-functions",
-  //   "@babel/plugin-transform-classes"
-  // ]
+  "plugins": [
+    "@babel/plugin-transform-arrow-functions",
+    "@babel/plugin-transform-classes"
+  ]
 }
